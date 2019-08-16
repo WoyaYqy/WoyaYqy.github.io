@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://woyayqy.com">
-  <title>Archives | YQY&#39;s Blog</title>
+  <title>《算法导论》第12、13章学习心得 | YQY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YQY&#39;s Blog">
-<meta property="og:url" content="http://woyayqy.com/archives/index.html">
+  <meta name="description" content="第12章 二叉搜索树，之前有幸看过一位好老师的数据结构讲解视频，所以学起来比较愉悦。二叉搜索树有个重要且很方便的性质：将KEY值投影到水平坐标轴上从左到右是非降序的，虽然就是中序遍历后有序的意思，但是对我学习它来说可算是方便了许多。接下来就到了它的一系列操作：查找、插入和删除。这些操作的过程基于它的性质都比较好理解，其中比较复杂的是删除操作，但是借助书中给出的图和详尽的解释，多领会几次也能理解，并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《算法导论》第12、13章学习心得">
+<meta property="og:url" content="http://woyayqy.com/2019/08/16/《算法导论》第12、13章学习心得/index.html">
 <meta property="og:site_name" content="YQY&#39;s Blog">
+<meta property="og:description" content="第12章 二叉搜索树，之前有幸看过一位好老师的数据结构讲解视频，所以学起来比较愉悦。二叉搜索树有个重要且很方便的性质：将KEY值投影到水平坐标轴上从左到右是非降序的，虽然就是中序遍历后有序的意思，但是对我学习它来说可算是方便了许多。接下来就到了它的一系列操作：查找、插入和删除。这些操作的过程基于它的性质都比较好理解，其中比较复杂的是删除操作，但是借助书中给出的图和详尽的解释，多领会几次也能理解，并">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-16T09:24:38.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YQY&#39;s Blog">
+<meta name="twitter:title" content="《算法导论》第12、13章学习心得">
+<meta name="twitter:description" content="第12章 二叉搜索树，之前有幸看过一位好老师的数据结构讲解视频，所以学起来比较愉悦。二叉搜索树有个重要且很方便的性质：将KEY值投影到水平坐标轴上从左到右是非降序的，虽然就是中序遍历后有序的意思，但是对我学习它来说可算是方便了许多。接下来就到了它的一系列操作：查找、插入和删除。这些操作的过程基于它的性质都比较好理解，其中比较复杂的是删除操作，但是借助书中给出的图和详尽的解释，多领会几次也能理解，并">
   
     <link rel="alternative" href="/atom.xml" title="YQY&#39;s Blog" type="application/atom+xml">
   
@@ -142,130 +146,138 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《算法导论》第12、13章学习心得" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      《算法导论》第12、13章学习心得
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/16/《算法导论》第12、13章学习心得/" class="archive-article-date">
+
+        
+        <a href="/2019/08/16/《算法导论》第12、13章学习心得/" class="archive-article-date">
   	<time datetime="2019-08-16T09:21:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/16/《算法导论》第12、13章学习心得/">《算法导论》第12、13章学习心得</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第12章</p>
+<p>二叉搜索树，之前有幸看过一位好老师的数据结构讲解视频，所以学起来比较愉悦。二叉搜索树有个重要且很方便的性质：将KEY值投影到水平坐标轴上从左到右是非降序的，虽然就是中序遍历后有序的意思，但是对我学习它来说可算是方便了许多。接下来就到了它的一系列操作：查找、插入和删除。这些操作的过程基于它的性质都比较好理解，其中比较复杂的是删除操作，但是借助书中给出的图和详尽的解释，多领会几次也能理解，并用代码实现。</p>
+<p>第13章</p>
+<p>红黑树，在二叉搜索树的基础上增加了红黑颜色属性，它的性质也因颜色要求变得丰富，如根叶节点为黑、<a id="more"></a>红结点的前后一代都为黑结点、每个结点的每条简单路径黑高相同等。正因为这些性质，在对其进行插入和删除操作时，为了保持它的原有性质，我们不得不增加一些比较复杂的辅助过程如旋转、变色。在学习插入操作时，结合书和他人的博客逐渐理解操作算法，并对着静态的图在脑海中反复播放动态结点的动态旋转画面。在看到删除那一节时，心态差点崩了，突如其来的“双重色”和不同情况的反复转换以及变色旋转，都让我一脸懵逼。一开始根本没办法理解任何一种情况，后来反反复复看着看着慢慢有了思路，最后如恍然大悟。“双重色”看成是负载着原来黑结点的黑高使命，要为因删除而失去的黑结点寻找替代者以弥补黑高的缺少而带来的性质5的破坏，4种情况其实只有第4种是真正解决了（终止）问题，其他3种情况都是为了向第4种靠近。理解之后结合代码和可视化网站初步实现了该算法，有点小开心。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://woyayqy.com/2019/08/16/《算法导论》第12、13章学习心得/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/《算法导论》第10、11章学习心得/" class="archive-article-date">
-  	<time datetime="2019-08-09T10:48:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/09/《算法导论》第10、11章学习心得/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《算法导论》第10、11章学习心得</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/《算法导论》第10、11章学习心得/">《算法导论》第10、11章学习心得</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/《算法导论》第3、4章学习心得/" class="archive-article-date">
-  	<time datetime="2019-08-02T09:07:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/《算法导论》第3、4章学习心得/">《算法导论》第3、4章学习心得</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/《算法导论》第1、2章学习心得/" class="archive-article-date">
-  	<time datetime="2019-07-25T09:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/《算法导论》第1、2章学习心得/">《算法导论》第1、2章学习心得</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -288,8 +300,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
